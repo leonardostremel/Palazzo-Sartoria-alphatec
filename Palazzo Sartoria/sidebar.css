@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.sidebar {
+    width: 100%;
+    background-color: rgba(255, 255, 240, 0); /* Fundo com leve transparência */
+    height: 80px; 
+    padding: 10px 20px; 
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    z-index: 900; 
+    display: flex; 
+    align-items: center; 
+    transition: background-color 0.3s ease; /* Transição suave para a cor do fundo */
+}
+
+.sidebar:hover {
+    background-color: #f5f3ee; /* Cor da sidebar ao passar o mouse */
+}
+
+.logo img {
+    max-width: 250px; 
+    height: auto;
+    object-fit: contain;
+}
+
+.menu {
+    flex-grow: 1; /* Permite que o menu ocupe o espaço restante */
+}
+
+.menu ul {
+    list-style: none; /* Remove os pontos da lista */
+    padding: 0; 
+    margin: 0; 
+    display: flex; /* Garante que o menu seja flexível */
+    align-items: center; 
+}
+
+.menu li {
+    margin: 0 15px; /* Espaçamento entre os itens do menu */
+}
+
+.menu a {
+    text-decoration: none; 
+    color: #2C3E50; 
+    display: flex; 
+    align-items: center; 
+    position: relative; /* Para permitir a barra embaixo */
+}
+
+.menu a i {
+    margin-right: 5px; 
+}
+
+.menu a:hover {
+    color: #556B2F; 
+}
+
+.menu a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #556B2F; 
+    transition: width 0.3s ease; /* Animação suave para a barra */
+}
+
+.menu a:hover::after {
+    width: 100%; 
+}
+
+.icons {
+    display: flex; 
+    justify-content: space-around; 
+    margin-left: auto; /* Para empurrar os ícones para a direita */
+}
+
+.icons a {
+    color: #D4AF37; 
+    font-size: 20px; 
+    text-decoration: none;
+    margin: 0 10px; /* Espaçamento entre ícones */
+}
+
+.menu a:hover, .icons a:hover {
+    color: #556B2F; 
+}
